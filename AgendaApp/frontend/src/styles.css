@@ -1,0 +1,55 @@
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  color: #0f172a;
+  background: #f8fafc;
+}
+
+body {
+  margin: 0;
+}
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 1rem;
+  display: grid;
+  gap: 1rem;
+}
+
+.auth-layout {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card {
+  background: #fff;
+  padding: 1rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+}
+
+input, select, textarea, button {
+  width: 100%;
+  padding: 0.6rem;
+  border-radius: 8px;
+  border: 1px solid #dbeafe;
+  margin: 0.2rem 0;
+  box-sizing: border-box;
+}
+
+button { background: #2563eb; color: white; border: none; }
+button.link { background: transparent; color: #2563eb; }
+
+.grid-2 { display: grid; gap: 0.5rem; grid-template-columns: 1fr; }
+.grid-3 { display: grid; gap: 0.5rem; grid-template-columns: 1fr; }
+.toolbar { display: grid; gap: 0.5rem; }
+.list { list-style: none; padding: 0; margin: 0.5rem 0 0; }
+.error { color: #dc2626; }
+
+@media (min-width: 768px) {
+  .grid-2 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .grid-3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .toolbar { grid-auto-flow: column; grid-auto-columns: minmax(120px, auto); align-items: center; }
+}
